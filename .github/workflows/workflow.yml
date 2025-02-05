@@ -17,5 +17,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run unit tests with nose
+      - name: Run Lab 01
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=triangle labs/01_running_tests_with_nose/test_triangle.py
+
+      - name: Run Lab 02
+        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=stack labs/02_writing_test_assertions/test_stack.py
+
