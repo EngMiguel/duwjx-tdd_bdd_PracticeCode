@@ -23,3 +23,8 @@ jobs:
       - name: Run Lab 02
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=stack labs/02_writing_test_assertions/test_stack.py
 
+      - name: Run Lab 03
+        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=account labs/03_test_fixtures/tests/test_account.py
+
+      - name: Run Lab 04
+        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=account labs/04_test_coverage/tests/test_account.py
