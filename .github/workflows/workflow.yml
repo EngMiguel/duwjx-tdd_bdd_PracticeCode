@@ -18,13 +18,25 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Lab 01
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=triangle labs/01_running_tests_with_nose/test_triangle.py
+        run: |
+          cd labs/01_running_tests_with_nose
+          nosetests -v --with-spec --spec-color --with-coverage --cover-package=triangle
+          cd ..
 
       - name: Run Lab 02
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=stack labs/02_writing_test_assertions/test_stack.py
+        run: |
+          cd 02_writing_test_assertions
+          nosetests
+          cd ..
 
       - name: Run Lab 03
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=models labs/03_test_fixtures/
+        run: |
+          cd 03_test_fixtures
+          nosetests
+          cd ..
 
       - name: Run Lab 04
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=models labs/04_test_coverage/
+        run: |
+          cd 04_test_coverage
+          nosetests
+          cd ..
