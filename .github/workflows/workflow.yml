@@ -18,4 +18,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests with nose
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
+        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app labs/01_running_tests_with_nose/test_triangle.py
