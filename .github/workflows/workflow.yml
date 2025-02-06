@@ -21,40 +21,37 @@ jobs:
         run: |
           cd labs/01_running_tests_with_nose
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=triangle
-          cd ..
 
       - name: Run Lab 02_writing_test_assertions
         run: |
-          cd 02_writing_test_assertions
+          cd labs/02_writing_test_assertions
           nosetests
-          cd ..
 
       - name: Run Lab 03_test_fixtures
         run: |
-          cd 03_test_fixtures
+          cd labs/03_test_fixtures
           nosetests
-          cd ..
 
       - name: Run Lab 04_test_coverage
         run: |
-          cd 04_test_coverage
+          cd labs/04_test_coverage
           nosetests
           cd ..
 
       - name: Run Lab 05_factories_and_fakes
         run: |
-          cd 05_factories_and_fakes
+          cd labs/05_factories_and_fakes
           nosetests
           cd ..
 
       - name: Run Lab 06_mocking_objects
         run: |
-          cd 06_mocking_objects
+          cd labs/06_mocking_objects
           nosetests
           cd ..
 
       - name: Run Lab 07_practicing_tdd
         run: |
-          cd 07_practicing_tdd
+          cd labs/07_practicing_tdd
           nosetests
           cd ..
