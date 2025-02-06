@@ -17,26 +17,44 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Lab 01
+      - name: Run Lab 01_running_tests_with_nose
         run: |
           cd labs/01_running_tests_with_nose
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=triangle
           cd ..
 
-      - name: Run Lab 02
+      - name: Run Lab 02_writing_test_assertions
         run: |
           cd 02_writing_test_assertions
           nosetests
           cd ..
 
-      - name: Run Lab 03
+      - name: Run Lab 03_test_fixtures
         run: |
           cd 03_test_fixtures
           nosetests
           cd ..
 
-      - name: Run Lab 04
+      - name: Run Lab 04_test_coverage
         run: |
           cd 04_test_coverage
+          nosetests
+          cd ..
+
+      - name: Run Lab 05_factories_and_fakes
+        run: |
+          cd 05_factories_and_fakes
+          nosetests
+          cd ..
+
+      - name: Run Lab 06_mocking_objects
+        run: |
+          cd 06_mocking_objects
+          nosetests
+          cd ..
+
+      - name: Run Lab 07_practicing_tdd
+        run: |
+          cd 07_practicing_tdd
           nosetests
           cd ..
