@@ -63,8 +63,8 @@ class TestAccountModel(TestCase):
 
     def test_from_dict(self):
         """ Test account from dict """
-        data = AccountFactory()
-        account = Account()
+        account = AccountFactory()
+        data = account.to_dict()
         account.from_dict(data)
         self.assertEqual(account.name, data["name"])
         self.assertEqual(account.email, data["email"])
