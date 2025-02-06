@@ -55,3 +55,38 @@ jobs:
           cd labs/07_practicing_tdd
           nosetests
           cd ..
+
+      - name: Install dependencies Behave
+        run: |
+          cd labs/08_environment_setup
+          pip install -r requirements.txt
+
+      - name: Run Lab 08_environment_setup
+        run: |
+          cd labs/08_environment_setup
+          behave
+          cd ..
+
+      - name: Run Lab 10_loading_test_data
+        run: |
+          cd labs/10_loading_test_data
+          behave
+          cd ..
+
+      - name: Run Lab 11_generating_steps
+        run: |
+          cd labs/11_generating_steps
+          behave
+          cd ..
+
+      - name: Run Lab 12_implementing_steps
+        run: |
+          cd labs/12_implementing_steps
+          behave
+          cd ..
+
+      - name: Run Lab 13_variable_substitution
+        run: |
+          cd labs/13_variable_substitution
+          behave
+          cd ..
